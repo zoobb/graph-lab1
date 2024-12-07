@@ -1,11 +1,13 @@
-EXECUTABLE := graph_lab1.exe
+EXECUTABLE := pi.exe
 
 SOURCE := main.go
 
 WINDOWS_FOLDER := /mnt/c/Users/hephaestusWin/Documents/uni/graph/lab1
 
 build:
-	GOOS=windows GOARCH=amd64 go build -ldflags "-H=windowsgui" -o $(WINDOWS_FOLDER)/$(EXECUTABLE) $(SOURCE)
+	GOOS=windows GOARCH=amd64 go build -o $(WINDOWS_FOLDER)/$(EXECUTABLE) $(SOURCE)
+
+#  -ldflags "-H=windowsgui"
 
 clean:
 	rm -f $(WINDOWS_FOLDER)/$(EXECUTABLE)
